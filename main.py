@@ -2,7 +2,10 @@ import numpy as np
 from binarization import binarize, build_score_matrix
 
 def main():
-	# Filler inputs for now
+	'''
+	Filler inputs for now
+	These can be removed when we have the actual feature vectors.
+	'''
 	gabor_P5 = np.random.randn(128)
 	gabor_P6 = np.random.randn(128)
 	gabor_P7 = np.random.randn(128)
