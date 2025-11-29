@@ -1,6 +1,6 @@
 import numpy as np
 from binarization import binarize, build_score_matrix
-
+#from threshold import select_threshold, authentication, auth_result
 def main():
 	'''
 	Filler inputs for now
@@ -27,5 +27,8 @@ def main():
 	print(scores)
 
 	# Step 5: Authentication Process
+	#threshold = select_threshold(scores)
+	#auth_matrix, match_pairs = authentication(scores, threshold)
+	#auth_result(auth_matrix, match_pairs, threshold)
 
 main()
