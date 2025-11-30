@@ -328,4 +328,5 @@ plt.tight_layout()
 plt.show()
 '''
 
+# Once the extraction step is over, we call main to do the rest of the process.
 main()
