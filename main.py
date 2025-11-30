@@ -115,10 +115,14 @@ def main():
 	# gallery = [binarize(x) for x in [gabor_G1, gabor_G2, gabor_G3, gabor_G4]]	
 	probes = [binarize(x) for x in probes_law]
 	print("Probes:")
-	[print(x) for x in probes]
+	for x in range(len(probes)):
+		print(f'FP{x+5}: {probes[x]}')
+	#[print(x) for x in probes]
 	gallery = [binarize(x) for x in gallery_law]
 	print("Gallery:")
-	[print(x) for x in gallery]
+	for x in range(len(gallery)):
+		print(f'FP{x+1}: {gallery[x]}')
+	#[print(x) for x in gallery]
 
 	# Step 4: Build Score Matrix
 	scores = build_score_matrix(probes, gallery)
