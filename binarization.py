@@ -10,12 +10,12 @@ def binarize(features):
 	feature_vec = np.asarray(features)
 	
 	# Sign method
-	binary = (feature_vec >= 0).astype(int)
+	#binary = (feature_vec >= 0).astype(int)
 
-	''' Median method (in case we need it later)
+	# Median method (in case we need it later)
 	thresh = np.median(feature_vec)
 	binary = (feature_vec >= thresh).astype(int)
-	'''
+	
 
 	return binary
 

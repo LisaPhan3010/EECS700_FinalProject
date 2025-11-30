@@ -1,10 +1,19 @@
 import numpy as np
 
 def select_threshold(score_matrix):
+    '''
+    Automatically select a threshold based on score matrix.
+    I use median for all scores. 
+    '''
     threshold = np.median(score_matrix) 
     return threshold
 
 def authentication(score_matrix, threshold):
+    '''
+    In order to authencation, I compared each score to the threshold
+    Steps:
+    1. Create a binary matrix where 1 indicates a match (score <= threshold)
+    2. Loop through each probe-gallery pair (if distance < threshold, it's a match)'''
     # Create a binary authentication matrix based on the threshold
     auth_matrix = (score_matrix <= threshold).astype(int)
 
