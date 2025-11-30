@@ -114,7 +114,11 @@ def main():
 	# probes = [binarize(x) for x in [gabor_P5, gabor_P6, gabor_P7]]
 	# gallery = [binarize(x) for x in [gabor_G1, gabor_G2, gabor_G3, gabor_G4]]	
 	probes = [binarize(x) for x in probes_law]
+	print("Probes:")
+	[print(x) for x in probes]
 	gallery = [binarize(x) for x in gallery_law]
+	print("Gallery:")
+	[print(x) for x in gallery]
 
 	# Step 4: Build Score Matrix
 	scores = build_score_matrix(probes, gallery)
@@ -246,7 +250,7 @@ print("\nExtracted image features (keys):", image_features.keys())
 # Print the shape of one of the feature vectors to confirm it's fixed-length
 if image_features:
     sample_key = next(iter(image_features))
-    print(f"\nShape of a sample feature vector ({sample_key}):", image_features[sample_key])
+    #print(f"\nShape of a sample feature vector ({sample_key}):", image_features[sample_key])
 
 
 '''
